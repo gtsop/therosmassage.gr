@@ -4,34 +4,59 @@
         <title>Therosmassage.gr</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     </head>
     <body>
         <style>
+            :root {
+                --accent: #204442;
+            }
+            p {
+                font-size: 2rem;
+            }
+            html, body, p, a {
+                font-family: "Lora", serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
             html, body {
                 font-size: 16px;
                 margin: 0;
                 padding: 0;
                 height: 100%;
                 width: 100%;
-                font-family: Arial;
+            }
+            a {
+                color: white;
             }
             body {
                 background-color: black;
                 color: white;
             }
             .panel {
-                height: 100vh;
+                position: relative;
+                background-color: var(--accent);
+                height: 80vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                overflow: hidden;
             }
-            .card-1 {
-                background-image: url('./assets/images/card-1.png');
+            .sea-landscape {
+                background-image: url('./assets/images/sea-landscape.png');
                 background-position: center;
                 background-size: cover;
+                position: absolute;
+                top: 0; right: 0;
+                left: 0; bottom: 0;
+                box-shadow: 0 60vh 60vh rgba(0,0,0,0.4) inset;
             }
             .theros-splash {
+                z-index: 1;
                 background-image: url('./assets/images/theros-splash.png');
                 background-position: center;
                 background-size: contain;
@@ -40,6 +65,7 @@
                 height: 50%;
             }
             .theros-info {
+                z-index: 1;
                 background-image: url('./assets/images/theros-info.png');
                 background-position: center;
                 background-size: contain;
@@ -47,11 +73,93 @@
                 width: 100%;
                 height: 20%;
             }
+            .theros-punch-line {
+                z-index: 1;
+                background-image: url('./assets/images/theros-punch-line.png');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 20%;
+            }
+            .massage-demo {
+                z-index: 1;
+                background-image: url('./assets/images/massage-demo.png');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 80%;
+            }
+            .left-decor { 
+                background-image: url('./assets/images/left-decor.png');
+                background-position: left center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0; right: 0;
+                left: 0; bottom: 0;
+            }
+            .book-panel {
+                height: 50vh;
+            }
+            .book-content {
+                z-index: 1;
+                text-align: center;
+            }
+            .book-email, .book-insta {
+                margin-bottom: 1rem;
+            }
+            .book-insta a, .book-tel a, .book-email a {
+                display: inline-flex;
+                gap: 1rem;
+            }
+            .book-email a::before {
+                content: ' ';
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-image: url('./assets/images/email-white-icon.webp');
+                background-size: contain;
+            }
+            .book-insta a::before {
+                content: ' ';
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-image: url('./assets/images/instagram-white-icon.webp');
+                background-size: contain;
+            }
+            .book-tel a::before {
+                content: ' ';
+                display: block;
+                width: 24px;
+                height: 24px;
+                background-image: url('./assets/images/call-white-icon.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
         </style>
         <main>
-            <div class="panel card-1">
+            <div class="panel">
+                <div class="sea-landscape"></div>
                 <div class="theros-splash"></div>
-                <div class="theros-info"></div>
+                <div class="theros-punch-line"></div>
+            </div>
+            <div class="panel book-panel">
+                <div class="left-decor"></div>
+                <div class="book-content">
+                    <p>BOOK A MASSAGE</p>
+                    <div class="book-email">
+                        <a href="mailto:theros.massage.athens@gmail.com">theros.massage.athens@gmail.com</a>
+                    </div>
+                    <div class="book-insta">
+                        <a href="https://www.instagram.com/theros_massage_athens">theros_massage_athens</a>
+                    </div>
+                    <div class="book-tel">
+                        <a href="tel:+306976683295">+30 6976683295</a>
+                    </div>
+                </div>
             </div>
         <main>
     </body>
