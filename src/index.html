@@ -19,25 +19,40 @@
                 background-color: black;
                 color: white;
             }
-            main {
-                height: 100%;
+            .panel {
+                height: 100vh;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                text-align: center;
             }
-            #massage-emoji {
-                font-size: 120px;
+            .card-1 {
+                background-image: url('./assets/images/card-1.png');
+                background-position: center;
+                background-size: cover;
             }
-            #comming-soon {
-                font-size: 2rem;
+            .theros-splash {
+                background-image: url('./assets/images/theros-splash.png');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 50%;
+            }
+            .theros-info {
+                background-image: url('./assets/images/theros-info.png');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 20%;
             }
         </style>
         <main>
-            <div>
-                <div id="massage-emoji">💆🏻</div>
-                <p id="comming-soon">σύντομα κοντά σας...</p>
-            </dvi>
+            <div class="panel card-1">
+                <div class="theros-splash"></div>
+                <div class="theros-info"></div>
+            </div>
         <main>
     </body>
 </html>
